@@ -1,3 +1,3 @@
-class Publisher < ActiveRecord::Base
-    has_many :games  
+class User < ActiveRecord::Base
+    has_many :games
 end

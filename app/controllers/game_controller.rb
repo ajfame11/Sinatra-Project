@@ -15,6 +15,8 @@ class GameController < ApplicationController
             else
                 redirt '/games'
             end
-    end 
+    end
+
+    
 
 end
