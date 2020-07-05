@@ -6,4 +6,15 @@ class GameController < ApplicationController
 
     end
 
+    get '/games/:id' do
+        #binding.pry
+        @game = Game.find_by_id(params[:id])
+
+            if @game
+                erb :'games/read_games'
+            else
+                redirt '/games'
+            end
+    end 
+
 end
