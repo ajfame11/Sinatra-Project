@@ -8,9 +8,13 @@ class CreateGamesTable < ActiveRecord::Migration
 
             t.text :description
 
-            t.integer :size
+            #t.integer :genre
 
-            t.integer :price
+            #t.integer :platform
+
+            #t.integer :design
+
+            #t.integer :features
 
             t.integer :user_id
 

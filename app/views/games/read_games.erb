@@ -1,7 +1,12 @@
 <h2><%= @game.title %></h2>
 <br>
 <p><%= @game.description %></p>
-<br>
-<h2><%= @game.size %></h2>
-<br>
-<h2><%= @game.price %></h2>
+
+<form method="POST" action="/games/<%= @game.id %>">
+    <input type="hidden" id="hidden" name="_method" value="patch">
+
+    <input type="submit" value="Delete">
+</form>
+
+<a href="/games/<%= @game.id %>/update"><button> Update Game <button></a>
+<a href="/games"><button> View Games <button></a>

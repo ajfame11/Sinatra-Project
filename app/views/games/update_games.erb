@@ -1,0 +1,13 @@
+<h2>Update Games!<h2>
+<br>
+<form method="post" action="/games/<%= @game.id %>">
+<input type="hidden" id="hidden" name="_method" value="patch">
+            <br>
+            <label>Title:</label>
+            <input type="text" name="title" value= "<%= game.title %>">
+            <br>
+            <textarea name="description"><%= game.description %></textarea>
+            <br>
+            <input type="submit">
+
+</form>
