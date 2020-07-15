@@ -1,4 +1,4 @@
 class Game < ActiveRecord::Base
     belongs_to :user
-    # validates :title, :description, presence: true
+    validates :title, :description, presence: true
 end
