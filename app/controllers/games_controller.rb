@@ -7,6 +7,13 @@ class GamesController < ApplicationController
             erb :'games/all_games'
     end
 
+    get '/games/' do #Temporary fix for update_games.erb
+        redirect_if_not_logged_in
+            #binding.pry
+            @games = current_user.games
+            erb :'games/all_games'
+    end
+
     get '/games/new' do
         redirect_if_not_logged_in
             erb :'games/create_games'

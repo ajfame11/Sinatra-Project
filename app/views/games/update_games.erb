@@ -1,13 +1,17 @@
-<h2>Update Games!<h2>
-<br>
-<form method="post" action="/games/<%= @game.id %>">
-<input type="hidden" id="hidden" name="_method" value="patch">
-            <br>
+<div class="container-fluid ">
+    <h1>Update Game</h1>
+        <hr>
+        <br>
+        <form method="post" action="/games/<%= @game.id %>">
+            <input type="hidden" id="hidden" name="_method" value="patch">
             <label>Title:</label>
             <input type="text" name="title" value= "<%= @game.title %>">
             <br>
+            <br>
+            <label>Description:</label>
             <textarea name="description"><%= @game.description %></textarea>
             <br>
+            <br>
             <input type="submit">
-
-</form>
+    </form>
+</div> 
