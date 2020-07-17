@@ -1,10 +1,18 @@
-<h2>Login!<h2>
-
-<form method="POST" action="/login">
-    <label for="email">Email:</label>
-    <input type="text" name="email">
-    <br>
-    <label for="password">Password:</label>
-    <input type="password" name="password">
-    <input type="submit">
-</form>
+<div class="container-fluid ">
+    <h1>Login Page</h1>
+        <hr>
+        <br>
+        <form method="POST" action="/login">
+            <label for="email">Email:</label>
+            <input type="text" placeholder="Please enter Email" name="Email" title="Ex: Johndoe@gmail.com"  >
+            <br>
+            <br>
+            <label for="password">Password:</label>
+            <input type="password" placeholder="Please enter password" name="password" title="Ex: password1">
+            <br>
+            <br>
+            <input type="submit" value="Submit"> 
+        </form>
+        <br>
+        Or you can <a href="/signup"><button> Signup Here <button></a>
+</div>    
