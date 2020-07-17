@@ -1,21 +1,22 @@
-<div class="container-fluid">
-    <h1 style="color:red;" style = text-black>Signup Page</h1>
+<div class="container-fluid ">
+    <h1>Signup Page</h1>
         <hr>
         <br>
         <form method="POST" action="/signup">
             <label for="name">Name:</label>
-            <input type="text" name="name">
+            <input type="text" placeholder="Please enter full name" name="name" title="Ex: John Doe"  >
             <br>
             <br>
             <label for="email">Email:</label>
-            <input type="text" name="email">
+            <input type="text" placeholder="Please enter E-mail" name="email" title="Ex: Johndoe@gmail.com">
             <br>
             <br>
             <label for="password">Password:</label>
-            <input type="password" name="password">
+            <input type="password" placeholder="Please create a password" name="password" title="Ex: password1">
             <br>
             <br>
-            <input type="submit" value="Submit"> -Or- <a href="/login"><button> Login Here <button></a>
-            
+            <input type="submit" value="Submit"> 
         </form>
+        <br>
+        Or you can <a href="/login"><button> Login Here <button></a>
 </div>    
