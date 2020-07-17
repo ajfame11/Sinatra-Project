@@ -1,11 +1,14 @@
-<h2><%= @game.title %></h2>
-<br>
-<p><%= @game.description %></p>
-
-<form method="POST" action="/games/<%= @game.id %>">
-    <input type="hidden" id="hidden" name="_method" value="delete">
-    <input type="submit" value="Delete">
-</form>
-
-<a href="/games/<%= @game.id %>/update"><button> Update Game <button></a>
-<a href="/games"><button> View Games <button></a>
+<div class="container-fluid ">
+    <h1><%= @game.title %></h1>
+    <hr>
+    <h3><%= @game.description %></h3>
+        <br>
+        <hr>
+        <form method="POST" action="/games/<%= @game.id %>">
+            <input type="hidden" id="hidden" name="_method" value="delete">
+            <input type="submit" value="Delete">
+        </form>
+        <br>
+        <a href="/games/<%= @game.id %>/update"><button> Update Game <button></a>
+        <a href="/games"><button> View Games <button></a>
+</div> 
