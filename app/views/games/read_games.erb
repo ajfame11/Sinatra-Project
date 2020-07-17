@@ -3,10 +3,9 @@
     <hr>
     <h3><%= @game.description %></h3>
         <br>
-        <hr>
         <form method="POST" action="/games/<%= @game.id %>">
             <input type="hidden" id="hidden" name="_method" value="delete">
-            <input type="submit" value="Delete">
+            <input type="submit" value="Delete Game">
         </form>
         <br>
         <a href="/games/<%= @game.id %>/update"><button> Update Game <button></a>
