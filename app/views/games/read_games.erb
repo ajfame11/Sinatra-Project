@@ -1,8 +1,47 @@
+<div class="topnav-right">
+
+    <p style="text-decoration: underline; float: left;"><%=@game.user.name%></p>
+
+    <a class="nav-link" href="/logout" style="float: right;">Logout</a>
+</div>
+<br>
+<br>
+
+<div class="table-responsive">
+
+      <div class="info" >
+        <div class="info-body">
+          <h5 style="text-decoration: underline;">Game Title</h5>
+          <p><%=@game.title%></p>
+        </div>
+      </div>
+
+      <div class="info" >
+        <div class="info-body">
+      <h5 style="text-decoration: underline;">Game description</h5>
+      <p><%=@game.description%></p>
+        </div>
+      </div>
+
+      <div class="info" >
+        <div class="info-body">      
+          <h5 style="text-decoration: underline;">Created At</h5>
+          <p><%=@game.created_at%></p>
+        </div>
+      </div>
+
+      <div class="info" >
+        <div class="info-body">
+          <h5 style="text-decoration: underline;">Updated At</h5>
+          <p><%=@game.updated_at%></p>
+        </div>
+      </div>
+      
+ </div>
+
 <div class="container-fluid ">
-    <h1><%= @game.title %></h1>
-    <hr>
-    <h3><%= @game.description %></h3>
-        <br>
+<hr>
+<br>
         <form method="POST" action="/games/<%= @game.id %>">
             <input type="hidden" id="hidden" name="_method" value="delete">
             <input type="submit" value="Delete Game">

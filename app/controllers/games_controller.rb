@@ -7,13 +7,6 @@ class GamesController < ApplicationController
             erb :'games/all_games'
     end
 
-    get '/games/' do #Temporary fix for update_games.erb
-        redirect_if_not_logged_in
-            #binding.pry
-            @games = current_user.games
-            erb :'games/all_games'
-    end
-
     get '/games/new' do
         redirect_if_not_logged_in
             erb :'games/create_games'
@@ -57,12 +50,12 @@ class GamesController < ApplicationController
     patch '/games/:id' do
         #binding.pry
         redirect_if_not_logged_in
-            game = current_user.games.find_by_id(params[:id])
-            if game
-                if game.update(title: params[:title], description: params[:description])
-                    redirect '/games/#{game.id}'
+            @game = current_user.games.find_by_id(params[:id])
+            if @game
+                if @game.update(title: params[:title], description: params[:description])
+                    redirect "/games/#{@game.id}"
                 else
-                    redirect '/games/#{game}/update'
+                    redirect "/games/#{@game}/update"
                 end
             else
                 redirect '/games'
