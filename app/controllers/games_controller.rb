@@ -4,12 +4,12 @@ class GamesController < ApplicationController
         redirect_if_not_logged_in
             #binding.pry
             @games = current_user.games
-            erb :'games/all_games'
+            erb :'games/index'
     end
 
     get '/games/new' do
         redirect_if_not_logged_in
-            erb :'games/create_games'
+            erb :'games/new'
     end
 
     post '/games' do
@@ -30,7 +30,7 @@ class GamesController < ApplicationController
             @game = current_user.games.find_by_id(params[:id])
 
                 if @game
-                    erb :'games/read_games'
+                    erb :'games/show'
                 else
                     redirect '/games'
                 end
@@ -41,7 +41,7 @@ class GamesController < ApplicationController
         redirect_if_not_logged_in
             @game = current_user.games.find_by_id(params[:id])
             if @game
-                erb :'games/update_games'
+                erb :'games/edit'
             else
                 redirect '/games'
             end
