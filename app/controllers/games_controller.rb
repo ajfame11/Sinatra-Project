@@ -64,7 +64,7 @@ class GamesController < ApplicationController
 
     delete '/games/:id' do
         redirect_if_not_logged_in
-            game = Game.find_by_id(params[:id])
+            game = current_user.games.find_by_id(params[:id])
             if game
                 game.delete
             end
